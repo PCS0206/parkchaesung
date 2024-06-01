@@ -1,19 +1,18 @@
-function navigateTo(url) {
-    window.location.href = url;
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+  const languageSelect = document.getElementById('language-select');
+  languageSelect.addEventListener('change', (event) => {
+      const selectedLanguage = event.target.value;
+      if (selectedLanguage === 'en') {
+          window.location.href = 'https://example.com/en';
+      } else if (selectedLanguage === 'ko') {
+          window.location.href = 'https://example.com/ko';
+      }
+  });
 
-function changeLanguage() {
-    var language = document.getElementById("language").value;
-    var baseUrl = window.location.origin;  // 현재 페이지의 베이스 URL 가져오기
-    var newUrl;
-
-    if (language === 'en') {
-        newUrl = baseUrl + '/en';
-    } else if (language === 'ko') {
-        newUrl = baseUrl + '/ko';
-    } else if (language === 'fr') {
-        newUrl = baseUrl + '/fr';
-    }
-
-    window.location.href = newUrl;
-}
+  const buttons = document.querySelectorAll('.buttons button');
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          alert(button.textContent + ' clicked');
+      });
+  });
+});
