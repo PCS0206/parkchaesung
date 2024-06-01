@@ -8,11 +8,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
           window.location.href = 'https://pcs0206.github.io/parkchaesung/kr/';
       }
   });
-
-  const buttons = document.querySelectorAll('.buttons button');
-  buttons.forEach(button => {
-      button.addEventListener('click', () => {
-          alert(button.textContent + ' clicked');
-      });
-  });
-});
