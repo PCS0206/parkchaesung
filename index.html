@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Profile Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="flags-container">
-        <img src="https://telegra.ph/file/d56f61c05c6518bd1919d.png" alt="Canada Flag" class="flag">
-        <img src="https://telegra.ph/file/5f1537391ceb0ee4a3953.png" alt="South Korea Flag" class="flag">
-    </div>
-    <div class="profile-container">
-        <div class="profile">
-            <img src="https://telegra.ph/file/79eb904abc80c5a7e8480.png" alt="Profile Picture" class="profile-picture">
-            <h1 class="name">Chaesung, Park</h1>
-            <p class="description">This is a brief description about yourself. You can write anything here to describe who you are, what you do, and what interests you.</p>
-            <div class="buttons">
-                <a href="https://pcs0206.github.io/parkchaesung/history.html" class="button">Chaesung's History</a>
-                <a href="https://example2.com" class="button">Do you want to be a friend?</a>
-                <a href="https://example3.com" class="button">Contact</a>
+    <div class="container">
+        <div class="header">
+            <div class="language-select">
+                <select id="language" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="ko">한국어</option>
+                    <option value="fr">Français</option>
+                </select>
             </div>
+            <img src="your-logo-url.png" alt="Logo" class="logo">
+        </div>
+        <div class="profile">
+            <img src="https://telegra.ph/file/3d13d1e24d42d14a39a7f.png" alt="Profile Picture" class="profile-pic">
+        </div>
+        <div class="buttons">
+            <button onclick="navigateTo('https://example.com/en')">About</button>
+            <button onclick="navigateTo('https://example.com/en')">Portfolio</button>
+            <button onclick="navigateTo('https://example.com/en')">Contact</button>
+            <button onclick="navigateTo('https://example.com/en')">Blog</button>
         </div>
     </div>
     <script src="script.js"></script>
