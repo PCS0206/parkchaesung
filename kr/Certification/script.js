@@ -1,56 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const posts = [
-        {
-            title: '게시글 1',
-            image: 'https://via.placeholder.com/300.png?text=Image+1'
-        },
-        {
-            title: '게시글 2',
-            image: 'https://via.placeholder.com/300.png?text=Image+2'
-        },
-        {
-            title: '게시글 3',
-            image: 'https://via.placeholder.com/300.png?text=Image+3'
-        },
-        {
-            title: '게시글 4',
-            image: 'https://via.placeholder.com/300.png?text=Image+4'
-        }
-    ];
+// scripts.js
+function submitPost() {
+    const password = document.getElementById('password').value;
+    const title = document.getElementById('title').value;
+    const image = document.getElementById('image').files[0];
 
-    const postsContainer = document.getElementById('posts');
-
-    function renderPosts() {
-        postsContainer.innerHTML = '';
-        posts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.classList.add('post');
-
-            const postImage = document.createElement('img');
-            postImage.src = post.image;
-
-            const postTitle = document.createElement('h2');
-            postTitle.textContent = post.title;
-
-            postElement.appendChild(postImage);
-            postElement.appendChild(postTitle);
-
-            postsContainer.appendChild(postElement);
-        });
+    if (password !== 'admin') {
+        alert('비밀번호가 틀렸습니다.');
+        return;
     }
 
-    document.getElementById('postForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const title = document.getElementById('postTitle').value;
-        const image = document.getElementById('postImage').value;
+    if (!title || !image) {
+        alert('제목과 이미지를 입력해주세요.');
+        return;
+    }
 
-        posts.push({ title, image });
-
-        renderPosts();
-
-        // 폼 초기화
-        document.getElementById('postForm').reset();
-    });
-
-    renderPosts();
-});
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const post = document.createElement('div');
+        post.className = 'post';
+        post.innerHTML = `<img src="${event.target.result}" alt="${title}"><h3>${title}</h3>`;
+        document.getElementById('posts').appendChild(post);
+    }
+    reader.readAsDataURL(image);
+}
