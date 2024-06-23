@@ -64,22 +64,6 @@ header .flags img {
   color: #666;
 }
 
-.language-selector {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-}
-
-.language-selector select {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #ffffff;
-  color: #333;
-  cursor: pointer;
-}
-
 /* 반응형 디자인 */
 @media (max-width: 900px) {
   .post {
@@ -92,4 +76,5 @@ header .flags img {
     width: calc(100% - 40px);
   }
 }
+
 
