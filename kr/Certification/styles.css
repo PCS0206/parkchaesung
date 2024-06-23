@@ -1,75 +1,39 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
 }
 
-.container {
+.board {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-form {
+.post-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
-form input, form button {
+.post-form input, .post-form button {
+    margin: 10px 0;
     padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     font-size: 16px;
 }
 
-form button {
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #4cae4c;
-}
-
 .posts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .post {
-    background: white;
-    margin: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s;
-}
-
-.post img {
-    width: 100%;
-    height: auto;
-}
-
-.post h2 {
+    border: 1px solid #ccc;
     padding: 10px;
-    font-size: 18px;
-    margin: 0;
     text-align: center;
 }
 
-.post:hover {
-    transform: scale(1.05);
+.post img {
+    max-width: 100%;
+    height: auto;
 }
