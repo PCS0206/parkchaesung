@@ -21,13 +21,24 @@ header {
   box-sizing: border-box;
 }
 
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
 header .logo img {
-  height: auto; /* 로고 이미지의 높이 자동 조정 */
+  height: 60px; /* 조정 가능한 높이 설정 */
+}
+
+header .flags {
+  display: flex;
+  align-items: center;
 }
 
 header .flags img {
-  width: 50px; /* 국기 이미지의 너비 고정 */
-  height: auto; /* 국기 이미지의 높이 자동 조정 */
+  margin-left: 10px;
+  width: 40px; /* 조정 가능한 너비 설정 */
+  height: auto;
 }
 
 .posts-container {
@@ -75,8 +86,3 @@ header .flags img {
     width: calc(100% - 40px);
   }
 }
-
-  }
-}
-
-
