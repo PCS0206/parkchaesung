@@ -1,23 +1,22 @@
 /* 기본 스타일 */
-.header {
+header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* 상하 10px, 좌우 20px 패딩 적용 */
+  padding: 10px 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 
-.logo {
-  display: flex;
-  align-items: center; /* 로고 세로 중앙 정렬 */
+header .logo {
+  width: 150px; /* 로고의 너비 설정 */
 }
 
-.logo img {
-  width: 150px; /* 로고 이미지 너비 설정 */
-  margin-right: 10px; /* 로고 오른쪽 여백 설정 */
+header .logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
