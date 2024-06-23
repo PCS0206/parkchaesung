@@ -105,12 +105,12 @@ body {
 }
 
 .close-popup {
-  color: #ffffff;
+  color: red; /* Red color */
   font-size: 30px;
   font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 10px; /* Adjusted to move closer to the top right corner */
   cursor: pointer;
 }
 
