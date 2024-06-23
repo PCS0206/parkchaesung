@@ -19,6 +19,8 @@ document.getElementById('addButton').addEventListener('click', function() {
 
   // 보드에 새로운 항목 추가
   board.appendChild(newItem);
+});
 
-  window.location.href = 'https://www.naver.com'; // 원하는 URL로 변경
+document.getElementById('logoImg').addEventListener('click', function() {
+    window.location.href = 'https://www.naver.com'; // 원하는 URL로 변경
 });
