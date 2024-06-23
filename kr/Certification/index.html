@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>게시판</h1>
-        <form id="postForm">
-            <input type="text" id="postTitle" placeholder="제목" required>
-            <input type="url" id="postImage" placeholder="이미지 URL" required>
-            <button type="submit">글쓰기</button>
-        </form>
-        <div id="posts" class="posts"></div>
+    <div class="board">
+        <div class="post-form">
+            <input type="password" id="password" placeholder="비밀번호">
+            <input type="text" id="title" placeholder="제목">
+            <input type="file" id="image">
+            <button onclick="submitPost()">글쓰기</button>
+        </div>
+        <div class="posts" id="posts"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
