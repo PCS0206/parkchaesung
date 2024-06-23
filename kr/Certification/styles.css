@@ -9,15 +9,19 @@
   box-sizing: border-box;
 }
 
+.logo {
+  margin-right: 20px; /* Adjust spacing between logo and flags */
+}
+
 .logo img {
-  width: 150px; /* Adjust as necessary */
+  width: 150px;
 }
 
 .flags img {
-  margin-left: 10px;
-  width: 50px; /* Adjust as necessary */
-  height: 30px; /* Adjust as necessary */
+  width: 50px;
+  height: 30px;
 }
+
 
 .container {
   max-width: 800px;
