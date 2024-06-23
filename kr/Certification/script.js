@@ -20,19 +20,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const postsContainer = document.getElementById('posts');
 
-    posts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.classList.add('post');
+    function renderPosts() {
+        postsContainer.innerHTML = '';
+        posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
 
-        const postImage = document.createElement('img');
-        postImage.src = post.image;
+            const postImage = document.createElement('img');
+            postImage.src = post.image;
 
-        const postTitle = document.createElement('h2');
-        postTitle.textContent = post.title;
+            const postTitle = document.createElement('h2');
+            postTitle.textContent = post.title;
 
-        postElement.appendChild(postImage);
-        postElement.appendChild(postTitle);
+            postElement.appendChild(postImage);
+            postElement.appendChild(postTitle);
 
-        postsContainer.appendChild(postElement);
+            postsContainer.appendChild(postElement);
+        });
+    }
+
+    document.getElementById('postForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const title = document.getElementById('postTitle').value;
+        const image = document.getElementById('postImage').value;
+
+        posts.push({ title, image });
+
+        renderPosts();
+
+        // 폼 초기화
+        document.getElementById('postForm').reset();
     });
+
+    renderPosts();
 });
