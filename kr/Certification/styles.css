@@ -30,6 +30,10 @@ body {
 }
 
 .board {
+  /* display: flex; */ /* 이 부분은 제거합니다 */
+}
+
+.row {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
