@@ -85,27 +85,33 @@ body {
   text-align: center; /* 사진 중앙 정렬 */
 }
 
-.photo-grid {
-  display: flex;
-  justify-content: center; /* 사진 아이템 중앙 정렬 */
-  gap: 20px;
+/* Add styles for the popup container */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50px; /* Adjust to position where you want the popup to appear */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+  z-index: 1000; /* Ensure it's on top of everything */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.photo-item {
-  width: 128px; /* 사진 너비 */
-  height: 128px; /* 사진 높이 */
-  overflow: hidden;
-  border-radius: 10px;
+.popup-image {
+  max-width: 100%;
+  max-height: 80vh; /* Limit height to 80% of viewport height */
 }
 
-.photo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.2s ease;
+.close-popup {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
 }
 
-.photo-item:hover img {
-  transform: scale(1.1); /* 호버 시 확대 효과 */
-}
 
