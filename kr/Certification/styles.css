@@ -1,4 +1,4 @@
-.header {
+header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -9,11 +9,11 @@
   box-sizing: border-box;
 }
 
-.logo {
+logo {
   margin-right: 20px; /* Adjust spacing between logo and other content */
 }
 
-.logo img {
+logo img {
   width: 150px;
 }
 
