@@ -30,18 +30,20 @@ body {
 }
 
 .board {
-  /* display: flex; */ /* 이 부분은 제거합니다 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .row {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   gap: 20px;
-  margin-bottom: 20px; /* 행 사이의 간격을 설정합니다 */
 }
 
 .item {
-  flex: 1 0 auto;
-  max-width: calc(33.33% - 20px);
+  width: calc(33.33% - 20px);
   padding: 10px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
