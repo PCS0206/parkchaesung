@@ -22,13 +22,12 @@ header {
 }
 
 header .logo img {
-  height: 40px;
+  height: auto; /* 로고 이미지의 높이 자동 조정 */
 }
 
 header .flags img {
-  margin-left: 10px;
-  width: 50px;
-  height: 30px;
+  width: 50px; /* 국기 이미지의 너비 고정 */
+  height: auto; /* 국기 이미지의 높이 자동 조정 */
 }
 
 .posts-container {
@@ -74,6 +73,9 @@ header .flags img {
 @media (max-width: 600px) {
   .post {
     width: calc(100% - 40px);
+  }
+}
+
   }
 }
 
