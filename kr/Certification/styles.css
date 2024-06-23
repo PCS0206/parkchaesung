@@ -120,8 +120,8 @@ body {
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  top: 15px;
-  right: 15px; /* Adjusted to move closer to the top right corner */
+  top: -5px;
+  right: 30px; /* Adjusted to move closer to the top right corner */
   cursor: pointer;
 }
 
