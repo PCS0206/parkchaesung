@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판</title>
+    <title>3*X 게시판</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="board">
-        <div class="post-form">
-            <input type="password" id="password" placeholder="비밀번호">
-            <input type="text" id="title" placeholder="제목">
-            <input type="file" id="image">
-            <button onclick="submitPost()">글쓰기</button>
-        </div>
-        <div class="posts" id="posts"></div>
+    <div class="header">
+        <button class="back-button" onclick="goBack()">뒤로</button>
     </div>
-    <script src="scripts.js"></script>
+    <div class="board">
+        <!-- 게시글 항목 -->
+        <div class="post">
+            <img src="image1.jpg" alt="Post Image">
+            <p>이것은 첫 번째 게시글입니다.</p>
+        </div>
+        <div class="post">
+            <img src="image2.jpg" alt="Post Image">
+            <p>이것은 두 번째 게시글입니다.</p>
+        </div>
+        <div class="post">
+            <img src="image3.jpg" alt="Post Image">
+            <p>이것은 세 번째 게시글입니다.</p>
+        </div>
+        <!-- 더 많은 게시글 추가 -->
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
