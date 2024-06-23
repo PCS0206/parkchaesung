@@ -121,7 +121,7 @@ body {
   font-weight: bold;
   position: absolute;
   top: -5px;
-  right: 20px; /* Adjusted to move closer to the top right corner */
+  right: 10px; /* Adjusted to move closer to the top right corner */
   cursor: pointer;
 }
 
