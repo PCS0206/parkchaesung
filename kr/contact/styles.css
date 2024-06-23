@@ -40,21 +40,29 @@ body {
 }
 
 .section-photos {
-  display: flex;
-  justify-content: space-between;
+  text-align: center; /* 사진 중앙 정렬 */
 }
 
 .photo-grid {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center; /* 사진 아이템 중앙 정렬 */
   gap: 20px;
 }
 
 .photo-item {
-  width: calc(25% - 15px); /* 4개의 사진을 균일하게 배치 */
+  width: 128px; /* 사진 너비 */
+  height: 128px; /* 사진 높이 */
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .photo-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.1); /* 호버 시 확대 효과 */
 }
