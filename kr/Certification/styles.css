@@ -1,29 +1,17 @@
 /* 기본 스타일 */
-header {
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  padding: 10px 20px; /* 상단과 하단에 10px, 좌우에 20px의 padding 추가 */
-  margin-top: 0; /* 헤더의 상단 margin 초기화 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* 필요에 따라 z-index 설정 */
 }
 
-
-header .logo {
+.logo img {
   width: 150px; /* 로고의 너비 설정 */
-}
-
-header .logo img {
-  max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -63,4 +51,3 @@ header .logo img {
 .item a:hover {
   text-decoration: underline;
 }
-
