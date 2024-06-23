@@ -32,8 +32,8 @@ body {
 }
 
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
@@ -41,6 +41,7 @@ body {
 }
 
 .post {
+    width: calc((100% - 40px) / 3); /* 3개의 열을 만들기 위해 너비를 설정합니다. */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
