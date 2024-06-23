@@ -9,6 +9,11 @@
 <body>
     <div class="container">
         <h1>게시판</h1>
+        <form id="postForm">
+            <input type="text" id="postTitle" placeholder="제목" required>
+            <input type="url" id="postImage" placeholder="이미지 URL" required>
+            <button type="submit">글쓰기</button>
+        </form>
         <div id="posts" class="posts"></div>
     </div>
     <script src="script.js"></script>
