@@ -10,8 +10,13 @@
   box-sizing: border-box;
 }
 
-.logo img {
+.header .logo {
   width: 150px; /* 로고의 너비 설정 */
+}
+
+.header .logo img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
