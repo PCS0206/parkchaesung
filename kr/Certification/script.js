@@ -1,11 +1,14 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-  const languageSelect = document.getElementById('language-select');
-  languageSelect.addEventListener('change', (event) => {
-      const selectedLanguage = event.target.value;
-      if (selectedLanguage === 'ko') {
-          window.location.href = 'https://pcs0206.github.io/parkchaesung/kr/';
-      } else if (selectedLanguage === 'en') {
-          window.location.href = 'https://pcs0206.github.io/parkchaesung/en/';
-      }
-  });
-});
+@media (max-width: 600px) {
+    .profile-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+}
